@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Productivity Blocker",
+  "version": "1.0",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "focus.png"
+  },
+  "icons": {
+    "48": "focus.png"
+  }
+}

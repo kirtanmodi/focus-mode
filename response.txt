@@ -1,0 +1,367 @@
+// 
+      }, () => {
+    44|    if (chrome.runtime.lastError) {
+    45|      console.log("Error setting alarm:", chrome.runtime.lastError.message);
+    46|    } else {
+    47|      console.log("Alarm set successfully for 'blockSites' with duration:", duration);
+    48|    }
+    49|  });
+
+// 
+      console.log("Alarm listener triggered");
+
+// /Users/kirtan/Developer/practice/chrome extension/focus mode/popup.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Focus Mode Settings</h1>
+    </header>
+    <section aria-labelledby="blockSiteSection">
+        <div id="blockSiteSection">
+            <label for="website">Website URL:</label>
+            <input type="text" id="website" aria-label="Enter website URL" placeholder="Add website" required>
+            <button id="add">Add</button>
+        </div>
+    </section>
+    <ul id="siteList" aria-label="List of blocked sites"></ul>
+    <script src="popup.js"></script>
+</body>
+</html>
+
+
+// /Users/kirtan/Developer/practice/chrome extension/focus mode/styles.css
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f0f0f0;
+	color: #333;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30rem;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	text-align: center;
+}
+
+h1, h2 {
+	color: #1a73e8;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 10px 0;
+}
+
+h2 {
+	font-size: 18px;
+	text-align: left;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 400px;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	border-radius: 8px;
+}
+
+label {
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 5px;
+}
+
+input, button {
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+input {
+	background-color: #fafafa;
+	border: 2px solid #e0e0e0;
+}
+
+button {
+	background-color: #1a73e8;
+	color: white;
+	cursor: pointer;
+	border: none;
+	font-size: 16px;
+	font-weight: 500;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #0f57c2;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	width: 100%;
+	max-width: 400px;
+}
+
+ul li {
+	background-color: #ffffff;
+	padding: 10px;
+	border-radius: 8px;
+	margin-top: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+ul li button {
+	background-color: transparent;
+	color: #1a73e8;
+	border: none;
+	font-size: 12px;
+	padding: 5px;
+	width: 100%;
+	height: 100%;
+	line-height: 25px;
+	text-align: center;
+}
+
+ul li button:hover {
+	color: #0f57c2;
+}
+
+// git/scm0/input
+
+
+// 
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f0f0f0;
+	color: #333;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30rem;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	text-align: center;
+}
+
+h1, h2 {
+	color: #1a73e8;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 10px 0;
+}
+
+h2 {
+	font-size: 18px;
+	text-align: left;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 400px;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	border-radius: 8px;
+}
+
+label {
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 5px;
+}
+
+input, button {
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+input {
+	background-color: #fafafa;
+	border: 2px solid #e0e0e0;
+}
+
+button {
+	background-color: #1a73e8;
+	color: white;
+	cursor: pointer;
+	border: none;
+	font-size: 16px;
+	font-weight: 500;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #0f57c2;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	width: 100%;
+	max-width: 400px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+ul li {
+	background-color: #ffffff;
+	padding: 10px;
+	border-radius: 8px;
+	margin-top: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+ul li button {
+	background-color: transparent;
+	color: #1a73e8;
+	border: none;
+	font-size: 12px;
+	padding: 5px;
+	width: 100%;
+	height: 100%;
+	line-height: 25px;
+	text-align: center;
+}
+
+ul li button:hover {
+	color: #0f57c2;
+}
+
+// /Users/kirtan/Developer/practice/chrome extension/focus mode/popup.js
+// This script handles user interactions with the popup UI.
+document.getElementById("add").addEventListener("click", function () {
+  const site = document.getElementById("website").value.trim();
+  if (!site) {
+    alert("Please enter a website to add.");
+    return;
+  }
+  chrome.storage.sync.get(["blockedSites"], function (result) {
+    let sites = result.blockedSites || [];
+    if (!sites.includes(site)) {
+      sites.push(site);
+      chrome.storage.sync.set({ blockedSites: sites }, function () {
+        if (chrome.runtime.lastError) {
+          alert("Error adding website: " + chrome.runtime.lastError.message);
+        } else {
+          updateSiteList(sites);
+          alert("Website added successfully!");
+          document.getElementById("website").value = "";
+        }
+      });
+    } else {
+      alert("Website already in the list.");
+    }
+  });
+});
+
+function updateSiteList(sites) {
+  const listElement = document.getElementById("siteList");
+  listElement.innerHTML = "";
+  sites.forEach((site) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = site;
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.onclick = function () {
+      removeSite(site);
+    };
+    listItem.appendChild(removeButton);
+    listElement.appendChild(listItem);
+  });
+}
+
+function removeSite(site) {
+  chrome.storage.sync.get(["blockedSites"], function (result) {
+    let sites = result.blockedSites || [];
+    const index = sites.indexOf(site);
+    if (index > -1) {
+      sites.splice(index, 1);
+      chrome.storage.sync.set({ blockedSites: sites }, function () {
+        if (chrome.runtime.lastError) {
+          alert("Error removing website: " + chrome.runtime.lastError.message);
+        } else {
+          updateSiteList(sites);
+          alert("Website removed successfully!");
+        }
+      });
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  chrome.storage.sync.get(["blockedSites"], function (result) {
+    updateSiteList(result.blockedSites || []);
+  });
+});
+
+
+// /Users/kirtan/Developer/practice/chrome extension/focus mode/background.js
+// This script manages the blocking of sites based on stored settings.
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === "complete" && tab.url) {
+    chrome.storage.sync.get(["blockedSites"], (result) => {
+      if (chrome.runtime.lastError) {
+        console.error("Failed to retrieve blocked sites:", chrome.runtime.lastError.message);
+      } else {
+        enforceSiteBlocking(tab, result.blockedSites);
+      }
+    });
+  }
+});
+
+function enforceSiteBlocking(tab, sites) {
+  if (!sites || sites.length === 0) {
+    console.log("No sites to block.");
+    return;
+  }
+  let url = new URL(tab.url);
+  let hostname = url.hostname.replace(/^www\./, ""); // Removes 'www.' from the hostname
+  if (sites.some((site) => hostname === site)) {
+    chrome.tabs.remove(tab.id, () => {
+      if (chrome.runtime.lastError) {
+        console.error("Failed to remove tab:", chrome.runtime.lastError.message);
+      } else {
+        console.log("Blocked and removed site:", hostname);
+      }
+    });
+  }
+}
+
+
+// /Users/kirtan/Developer/practice/chrome extension/focus mode/popup.html.git
+
+

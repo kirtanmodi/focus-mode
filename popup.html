@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Focus Mode Settings</h1>
+    </header>
+    <section aria-labelledby="blockSiteSection">
+        <div id="blockSiteSection">
+            <label for="website">Website URL:</label>
+            <input type="text" id="website" aria-label="Enter website URL" placeholder="Add website" required>
+            <button id="add">Add</button>
+        </div>
+    </section>
+    <ul id="siteList" aria-label="List of blocked sites"></ul>
+    <script src="popup.js"></script>
+</body>
+</html>
